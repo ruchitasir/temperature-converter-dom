@@ -1,12 +1,8 @@
 
 
-document.getElementById("submitId").addEventListener('click',convertTemp);
-
-document.getElementById("clearId").addEventListener('click',init);
 
 function refresh()
-{
-    
+{ 
     let mainParent = document.getElementById("main");
    let divElement= document.getElementById("resultTemp");
    //console.log("para element in clear button",divElement);
@@ -44,6 +40,7 @@ function caclulateTemp(tempVal, ifCheckedF){
     return resultTemp
 }
 
+
 let prevInputVal =0;
 let prevCheck="";
 
@@ -61,7 +58,6 @@ function convertTemp()
   else{
     currentCheck ="C";
   }
-
   //console.log(inputVal);
  
         if(!isNaN(inputVal) )
@@ -84,8 +80,6 @@ function convertTemp()
             divElement.textContent= tempVal;
 
             changeBackColor(currentCheck, tempVal, divElement);
-           
-            
 
             let mainParent = document.getElementById("main");
            // console.log(mainParent);
@@ -95,9 +89,7 @@ function convertTemp()
             prevCheck=currentCheck;
 
             }
-
-        }
-            
+        }        
         else
         {
             alert("Please enter a number to convert");
@@ -125,4 +117,7 @@ function changeBackColor(checked, val,domElement){
 }
 
 
+document.getElementById("submitId").addEventListener('click',convertTemp);
+
+document.getElementById("clearId").addEventListener('click',init);
 
